@@ -1,0 +1,14 @@
+#!/bin/bash
+# Created 2020
+# Modified by SekarRepku VPN
+
+#script
+wget -O /etc/issue.net "https://github.com/latifangren/BANER-OPEN-SSH-DROPBEAR/releases/download/1.0/banner"
+
+cd
+#banner SSH OpenSSH
+sed -i '/Banner none/a Banner /etc/issue.net' /etc/ssh/sshd_config
+
+cd
+#banner Dropebar
+sed -i '/Banner none/a Banner /etc/issue.net' /etc/default/dropbear
